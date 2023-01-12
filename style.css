@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    background-color: #1e293b;
+    color: #f1f5f9;
+}
+
+img {
+    height: 50%;
+}
