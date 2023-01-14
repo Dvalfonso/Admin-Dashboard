@@ -1,17 +1,206 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-    margin: 0;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.container {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 1fr 3fr;
 }
 
 .options {
     display: flex;
     flex-direction: row;
+    font-size: 1em;
+    align-items: center;
+    gap: 15px;
+    font-weight:900;
+	margin-left: 1em;
 }
 
 .sidebar {
-    background-color: #1e293b;
+    background-color: #38bdf8;
     color: #f1f5f9;
+    padding: 1em;
+	display: grid;
+	grid-template-rows: repeat(auto-fit, minmax(1fr, 1fr));
+	grid-row-start: 1;
+	grid-row-end: 3;
 }
 
-img {
-    height: 50%;
+.sideImg {
+    height: 1.4em;
+}
+
+h1 {
+    font-size: 2.5em;
+	font-weight: 500;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+a:visited{
+	text-decoration: none;
+	color: #f1f5f9;
+}
+
+.dash{
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.dash:first-child{
+	height: 2.5em;
+}
+
+.header {
+	background-color: #93c5fd;
+	display: grid;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+
+	grid-template-rows: 1fr 1fr;
+}
+
+.arriba{
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+.busqueda {
+	display: flex;
+	align-items: center;
+	padding-left: 1em;
+	gap: 1em;
+}
+
+.busqueda img:first-child{
+	height: 2em;
+}
+
+.profile{
+	display: flex;
+	align-items: center;
+	gap: 2em;
+}
+
+#buscar{
+	height: 30%;
+	width: 80%;
+	border-radius: 15px;
+	border-style: none;
+}
+
+#lupa {
+	height: 1.5em;
+}
+
+#walter{
+	height: 3em;
+	width: 3em;
+	border-radius: 55px;
+}
+
+#name{
+	font-size: 1.5em;
+	font-weight: 900;
+	color: #f1f5f9;
+}
+
+#walterBig {
+	height: 4em;
+	width: 4em;
+	border-radius: 55px;
+}
+
+.izquierda {
+	margin-left: 1em;
+	display: flex;
+	gap: 1em;
+	align-items: center;
+}
+
+#mensaje{
+	font-weight: 900;
+	color: #f1f5f9;
+}
+
+span{
+	font-size: 1.5em;
+}
+
+.abajo{
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+.derecha{
+	display: flex;
+	gap: 2em;
+	align-items: center;
+	padding-left: 2em;
+}
+
+.boton{
+	border-style:groove;
+	border-color: #38bdf8;
+	height: 2em;
+	font-size: 1em;
+	background-color: #f1f5f9;
+	border-radius: 15px;
+	color: #38bdf8;
 }
